@@ -4,26 +4,32 @@ class Queue {
     this.items = [];
   }
 
+  // O(1)
   enqueue(value) {
     this.items.push(value);
   }
 
+  // O(n)
   dequeue() {
     return this.items.shift();
   }
 
+  // O(1)
   size() {
     return this.items.length;
   }
 
+  // O(1)
   peek() {
     return this.items[0];
   }
 
+  // O(1)
   rear() {
     return this.items[this.size() - 1];
   }
 
+  // O(1)
   isEmpty() {
     return this.size() === 0;
   }

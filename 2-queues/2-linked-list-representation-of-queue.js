@@ -13,6 +13,7 @@ class Queue {
     this.size = 0;
   }
 
+  // O(1)
   enqueue(value) {
     const node = new QNode(value);
 
@@ -28,6 +29,7 @@ class Queue {
     this.size++;
   }
 
+  // O(1)
   dequeue() {
     // if empty, nothing to return
     if (this.front === null) return null;
@@ -46,19 +48,23 @@ class Queue {
     return node.value;
   }
 
+  // O(1)
   getSize() {
     return this.size;
   }
 
+  // O(1)
   isEmpty() {
     return this.size === 0;
   }
 
+  // O(1)
   peek() {
     if (this.front === null) return null;
     return this.front.value;
   }
 
+  // O(1)
   getRear() {
     if (this.rear === null) return null;
     return this.rear.value;
