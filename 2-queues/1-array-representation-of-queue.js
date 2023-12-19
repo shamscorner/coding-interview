@@ -12,17 +12,25 @@ class Queue {
     return this.items.shift();
   }
 
+  size() {
+    return this.items.length;
+  }
+
   peek() {
     return this.items[0];
   }
 
+  rear() {
+    return this.items[this.size() - 1];
+  }
+
   isEmpty() {
-    return this.items.length === 0;
+    return this.size() === 0;
   }
 
   printQueue() {
     let str = "";
-    for (let i = 0; i < this.items.length; i++) {
+    for (let i = 0; i < this.size(); i++) {
       str += this.items[i] + " ";
     }
     return str;
@@ -40,3 +48,5 @@ console.log(queue.printQueue()); // 1 2 3 4
 queue.dequeue();
 console.log(queue.printQueue()); // 2 3 4
 console.log(queue.peek()); // 2
+console.log(queue.rear()); // 4
+console.log(queue.size()); // 3
